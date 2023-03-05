@@ -1,0 +1,8 @@
+#lang br/quicklang
+
+(provide read-syntax)
+
+(define (read-syntax path port)
+  (define src-lines (port->lines port))
+  (datum->syntax #f '(module lucy br 42)))
+
